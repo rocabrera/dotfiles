@@ -277,11 +277,6 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
-
-#Wallpaper 
-exec --no-startup-id feh --bg-scale /home/rocabrera/Pictures/wallpapers/world.jpg
-#exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
@@ -331,6 +326,15 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Dual monitor setup
+exec_always --no-startup-id xrandr --output DP-0 --right-of HDMI-0 --auto 
+
+#Wallpaper
+exec --no-startup-id feh --bg-scale /home/rocabrera/Pictures/wallpapers/world.jpg
+#exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
+
+
 #bar {
 #	i3bar_command i3bar
 #	status_command i3status
