@@ -13,4 +13,5 @@ fi
 source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/pyenv.sh
 source ~/dotfiles/zsh/prompt.sh
+source ~/dotfiles/zsh/sys_variables.sh
 
