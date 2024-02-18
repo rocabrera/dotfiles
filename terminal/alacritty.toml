@@ -1,0 +1,19 @@
+# themes from https://github.com/alacritty/alacritty-theme
+
+import = [
+    "~/.config/alacritty/themes/themes/taerminal.toml",
+    "~/.config/alacritty/shell.toml"
+]
+
+[font]
+size = 18 
+
+[font.normal]
+family = "SpaceMono Nerd Font"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 7
+y = 0

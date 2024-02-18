@@ -1,0 +1,40 @@
+# ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
+# Explicitly unset color (default anyhow). Use 1 to set it.
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_DESCRIBE_STYLE="branch"
+
+# ~~~~~~~~~~~~~~~ Directories ~~~~~~~~~~~~~~~~~~~~~~~~
+export REPOS="$HOME/Repos"
+export GITUSER="rocabrera"
+export GHREPOS="$REPOS/github/$GITUSER"
+export DOTFILES="$GHREPOS/dotfiles"
+export LAB="$GHREPOS/lab"
+export SCRIPTS="$DOTFILES/scripts"
+# export ICLOUD="$HOME/icloud"
+# export SECOND_BRAIN="$HOME/garden"
+
+# ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
+# control the .bash_history file 
+
+export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+export HISTCONTROL=ignorespace
+
+# ~~~~~~~~~~~~~~~ Editor ~~~~~~~~~~~~~~~~~~~~~~~~
+# export VISUAL=nvim
+# export EDITOR=nvim
+
+# ~~~~~~~~~~~~~~~ Pyenv ~~~~~~~~~~~~~~~~~~~~~~~~
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# ~~~~~~~~~~~~~~~ AWS ~~~~~~~~~~~~~~~~~~~~~~~~
+export AWS_PROFILE='developer'
+
+# ~~~~~~~~~~~~~~~ Terraform ~~~~~~~~~~~~~~~~~~~~~~~~
+export PATH=$PATH:/Users/rodrigocastaldoni/bin
