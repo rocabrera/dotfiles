@@ -30,11 +30,15 @@ export HISTCONTROL=ignorespace
 # export EDITOR=nvim
 
 # ~~~~~~~~~~~~~~~ Pyenv ~~~~~~~~~~~~~~~~~~~~~~~~
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # ~~~~~~~~~~~~~~~ AWS ~~~~~~~~~~~~~~~~~~~~~~~~
 export AWS_PROFILE='developer'
 
+# ~~~~~~~~~~~~~~~ Google Cloud ~~~~~~~~~~~~~~~~~~~~~~~~
+CLOUDSDK_PYTHON="/Users/rodrigocastaldoni/.pyenv/shims/python"
+
 # ~~~~~~~~~~~~~~~ Terraform ~~~~~~~~~~~~~~~~~~~~~~~~
 export PATH=$PATH:/Users/rodrigocastaldoni/bin
+

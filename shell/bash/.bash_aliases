@@ -12,8 +12,8 @@ alias icloud="cd \$ICLOUD"
 alias ..="cd .."
 alias e="exit"
 
-alias ls="exa --all --icons --git --color=always"
-alias ll="ls -la"
+# alias ls="exa --all --icons --git --color=always"
+# alias ll="ls -la"
 # alias ls='ls --color=auto'
 # alias ll='ls -la'
 # alias la='ls -lathr'
@@ -25,6 +25,11 @@ alias t='tmux'
 alias gp='git pull'
 alias gs='git status'
 alias ga='git add'
+
+
+
+# ~~~~~~~~~~~~~~~ UV ~~~~~~~~~~~~~~~~~~~~~~~~
+alias uvj="uv run --with jupyter jupyter lab"
 
 # ~~~~~~~~~~~~~~~ Terraform ~~~~~~~~~~~~~~~~~~~~~~~~
 
