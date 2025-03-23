@@ -4,19 +4,24 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Enables git-autocomplete
-if [ -f git-completion.bash ]; then
-   source git-completion.bash
-else
-   echo "git-completion.bash not found"
-fi
-
 # .bash_profile is executed for login shells, while
 # .bashrc is executed for interactive non-login shells.
 # Executes bashrc when using login shells.
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
+
+# Enables git-autocomplete
+enable_git_autocomplete () {
+	path="${DOTFILES}/shell/bash/git-completion.bash" 
+
+	if [ -f $path ]; then
+   		source $path 
+	else
+   		echo "git-completion.bash not found"
+	fi
+}
+enable_git_autocomplete
 
 # Archlinux directory pattern
 # https://wiki.archlinux.org/title/XDG_Base_Directory
