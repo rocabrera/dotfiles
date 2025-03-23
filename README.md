@@ -3,21 +3,20 @@
 Shell: Bash 
 Terminal Emulator: Alacrity
 
-Instalar: 
-
-- brew install bash
-- brew install bash-completion@2
-- brew install font-space-mono-nerd-font
-- brew install --cask alacritty
-- brew install neovim
-
-- Lazyvim: https://github.com/LazyVim/LazyVim
-- brew install koekeishiya/formulae/yabai
-- brew install koekeishiya/formulae/skhd
-
-Obs:
-
-To make homebrew's bash shell the default:
+# Setup
+1. Instalar o brew, [link](https://brew.sh)
+2. Instalar o bash via brew, [link](https://formulae.brew.sh/formula/bash).
+3. Definir o bash como shell default.
 ```bash
 echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
+
+chsh -s /opt/homebrew/bin/bash
 ```
+
+4. Instalar brew dependencies:
+	- kitty, [link](https://formulae.brew.sh/cask/kitty). # Chosen terminal
+	- space mono nerd font, [link](https://formulae.brew.sh/cask/font-space-mono-nerd-font). # Chosen fonts
+	- coreutils, [link](https://formulae.brew.sh/formula/coreutils). # Using to sort folders when listing (adds gls option)
+	- uv, [link](https://formulae.brew.sh/formula/uv). # Chosen python manager
+	- tfswitch, [link](https://tfswitch.warrensbox.com/Installation/). # terraform manager
+

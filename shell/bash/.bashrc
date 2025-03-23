@@ -11,25 +11,27 @@ source ~/.bash_envvars # contain only export
 # ~~~~~~~~~~~~~~~ Keybinds ~~~~~~~~~~~~~~~~~~~~~~~~
 bind -x '"\C-l":clear'
 
-# ~~~~~~~~~~~~~~~ Homebrew ~~~~~~~~~~~~~~~~~~~~~~~~
-# Needs: brew install bash-completion@2
-[[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
-
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
-# colorized prompt
-PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+get_status_code(){
+        status_code="$?"
+        if [ "${status_code}" -eq "0" ]; then
+                color="\e[1;32m"
+        else
+                color="\e[1;31m"
+        fi
+        echo -e "${color}Exit Status: $status_code\e[0m"
+}
 
-# ~~~~~~~~~~~~~~~ Pyenv ~~~~~~~~~~~~~~~~~~~~~~~~
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+PS1="\$(get_status_code) \[\033[01;97m\] \w \[\e[01;36m\]\$(parse_git_branch)\n\[\e[0m\]$: "
+
 
 # ~~~~~~~~~~~~~~~ UV ~~~~~~~~~~~~~~~~~~~~~~~~
 export PATH=$PATH:~/.local/bin
+eval "$(uv generate-shell-completion bash)"
 
 # ~~~~~~~~~~~~~~~ Terraform ~~~~~~~~~~~~~~~~~~~~~~~~
 export PATH=$PATH:/Users/rodrigocastaldoni/bin
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-eval "$(uv generate-shell-completion bash)"

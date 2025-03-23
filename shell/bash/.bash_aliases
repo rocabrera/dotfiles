@@ -3,20 +3,19 @@ alias sbrc='source $HOME/.bashrc'
 
 # ~~~~~~~~~~~~~~~ Directories ~~~~~~~~~~~~~~~~~~~~~~~~
 alias lab='cd $LAB'
-alias repos='cd $REPOS'
-alias dotfiles='cd $GHREPOS/dotfiles'
+alias dotfiles='cd $DOTFILES'
 alias scripts='cd $SCRIPTS'
-alias icloud="cd \$ICLOUD"
 
 # ~~~~~~~~~~~~~~~ Linux Commands ~~~~~~~~~~~~~~~~~~~~~~~~
 alias ..="cd .."
 alias e="exit"
 
-# alias ls="exa --all --icons --git --color=always"
-# alias ll="ls -la"
-# alias ls='ls --color=auto'
-# alias ll='ls -la'
-# alias la='ls -lathr'
+if [ "$OSTYPE" == linux-gnu ]; then  # Is this the Ubuntu system?
+    alias ls='ls -Flh --group-directories-first --color=auto'
+else
+    alias ls='gls -Flh --group-directories-first --color=auto'
+fi
+
 
 # ~~~~~~~~~~~~~~~ General Programs ~~~~~~~~~~~~~~~~~~~~~~~~
 alias t='tmux'
@@ -25,7 +24,7 @@ alias t='tmux'
 alias gp='git pull'
 alias gs='git status'
 alias ga='git add'
-
+alias gco='git commit'
 
 
 # ~~~~~~~~~~~~~~~ UV ~~~~~~~~~~~~~~~~~~~~~~~~
