@@ -20,3 +20,4 @@ chsh -s /opt/homebrew/bin/bash
 	- uv, [link](https://formulae.brew.sh/formula/uv). # Chosen python manager
 	- tfswitch, [link](https://tfswitch.warrensbox.com/Installation/). # terraform manager
 
+5. Instalar aws-cli, [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
