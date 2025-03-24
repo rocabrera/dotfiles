@@ -10,6 +10,8 @@ ln -sf "$PWD/shell/bash/.bash_aliases" "$HOME"/.bash_aliases
 ln -sf "$PWD/shell/bash/.bash_envvars" "$HOME"/.bash_envvars
 
 # Terminal configuration
+ln -sf "$PWD/terminal/kitty/kitty.conf" "$HOME"/.config/kitty/kitty.conf
+ln -sf "$PWD/terminal/kitty/current-theme.conf" "$HOME"/.config/kitty/current-theme.conf
 ln -sf "$PWD/terminal/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/terminal/.tmux.conf" "$HOME"/.tmux.conf
 
